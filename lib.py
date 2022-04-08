@@ -169,7 +169,7 @@ def random_binary_tree(grid):
     nodes = grid.get_cells()
     for node in nodes:
         walls = [wall for wall in grid.adjacent_walls(*node) \
-                 if wall[0] > node[0] or wall[1] > node[1]]
+                 if wall[0] < node[0] or wall[1] < node[1]]
         if walls:
             grid.erase_wall(*choice(walls))
 

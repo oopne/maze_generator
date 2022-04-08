@@ -41,13 +41,13 @@ def main():
         while not (len(start) == 2 and \
             start[0].isdigit() and start[1].isdigit() and \
             grid.is_cell_empty(*map(int, start))):
-            start = input('Enter start cell (<height> <width>): ')
+            start = input('Enter start cell (<row> <column>): ')
             start = start.strip().split()
         finish = ('a', 'a')
         while not (len(finish) == 2 and \
             finish[0].isdigit() and finish[1].isdigit() and \
             grid.is_cell_empty(*map(int, finish))):
-            finish = input('Enter finish cell (<height> <width>): ')
+            finish = input('Enter finish cell (<row> <column>): ')
             finish = finish.strip().split()
         copied_grid = deepcopy(grid)
         start = tuple(map(int, start))
